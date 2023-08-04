@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'persona-form';
+  userLogin = {
+    email: '',
+    password: '',
+    remember: false,
+  }
+  onLogin() {
+    console.log(this.userLogin);
+  }
 }

@@ -4,21 +4,21 @@
       <span>Hello,</span>
       welcome!
     </h1>
-    <form>
-      <div>
-        <span></span>
-        <input type="email">
+    <form (ngSubmit)="onLogin()" #myForm="ngForm">
+      <div class="input-group">
+        <span class="error-sign" name="email error" [class.invalid]="emailInput.invalid" ></span>
+        <input type="email" name="email" required id="email" [(ngModel)]="userLogin.email" #emailInput="ngModel">
+      </div>
+      <div class="input-group">
+        <span class="error-sign" name="password error" [class.invalid]="passwordInput.invalid" ></span>
+        <input type="password" name="password" required id="password" [(ngModel)]="userLogin.password" #passwordInput="ngModel">
       </div>
       <div>
-        <span></span>
-        <input type="password">
-      </div>
-      <div>
-        <input type="checkbox" name="remember me" id="">
+        <input type="checkbox" name="remember me" id="remember" [(ngModel)]="userLogin.remember">
         <p>Forget password</p>
       </div>
       <div>
-        <button>Login</button>
+        <button type="submit" [disabled]="myForm.invalid">Login</button>
         <button type="button">Sign up</button>
       </div>
     </form>
