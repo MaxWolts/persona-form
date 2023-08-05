@@ -1,29 +1,33 @@
-<section aria-label="login">
-  <div>
-    <h1>
-      <span>Hello,</span>
-      welcome!
-    </h1>
-    <form (ngSubmit)="onLogin()" #myForm="ngForm">
-      <div class="input-group">
-        <span class="error-sign" name="email error" [class.invalid]="emailInput.invalid" ></span>
-        <input type="email" name="email" required id="email" [(ngModel)]="userLogin.email" #emailInput="ngModel">
-      </div>
-      <div class="input-group">
-        <span class="error-sign" name="password error" [class.invalid]="passwordInput.invalid" ></span>
-        <input type="password" name="password" required id="password" [(ngModel)]="userLogin.password" #passwordInput="ngModel">
-      </div>
-      <div>
-        <input type="checkbox" name="remember me" id="remember" [(ngModel)]="userLogin.remember">
-        <p>Forget password</p>
-      </div>
-      <div>
-        <button type="submit" [disabled]="myForm.invalid">Login</button>
-        <button type="button">Sign up</button>
-      </div>
-    </form>
+<section aria-label="login" class="loginSignUp">
+  <div class="formSection">
+    <div class="formSection--form">
+      <h1>
+        <span>Hello,</span>
+        welcome!
+      </h1>
+      <form (ngSubmit)="onLogin()" #myForm="ngForm">
+        <div class="input-group">
+          <span class="error-sign" name="email error" [class.invalid]="emailInput.invalid" ></span>
+          <input type="email" name="email" required id="email" [(ngModel)]="userLogin.email" #emailInput="ngModel">
+        </div>
+        <div class="input-group">
+          <span class="error-sign" name="password error" [class.invalid]="passwordInput.invalid" ></span>
+          <input type="password" name="password" required id="password" [(ngModel)]="userLogin.password" #passwordInput="ngModel">
+        </div>
+        <div>
+          <input type="checkbox" name="remember me" id="remember" [(ngModel)]="userLogin.remember">
+          <p>Forget password</p>
+        </div>
+        <div>
+          <button type="submit" [disabled]="myForm.invalid">Login</button>
+          <button type="button">Sign up</button>
+        </div>
+      </form>
+    </div>
+    <div class="formSection--image">
+      <img src="https://personacentral.com/wp-content/uploads/2018/01/Persona-4-Manga-Volume-11.jpg" alt="image">
+    </div>
   </div>
-
 </section>
 
 
