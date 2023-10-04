@@ -14,11 +14,11 @@
           <span class="error-sign" name="password error" [class.invalid]="passwordInput.invalid" ></span>
           <input type="password" name="password" required id="password" [(ngModel)]="userLogin.password" #passwordInput="ngModel">
         </div>
-        <div>
+        <div class="input-rememberMe">
           <input type="checkbox" name="remember me" id="remember" [(ngModel)]="userLogin.remember">
-          <p>Forget password</p>
+          <label for="remember">remember me</label>
         </div>
-        <div>
+        <div class="button-container">
           <button type="submit" [disabled]="myForm.invalid">Login</button>
           <button type="button">Sign up</button>
         </div>
